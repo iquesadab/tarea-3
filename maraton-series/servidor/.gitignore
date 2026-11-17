@@ -1,0 +1,18 @@
+# Dependencias de Node.js
+node_modules/
+
+# Archivos generados por Vite
+dist/
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos generados por .NET
+bin/
+obj/
+.vs/
+
+# Archivos de registro
+*.log

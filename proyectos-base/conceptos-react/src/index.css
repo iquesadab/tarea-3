@@ -1,0 +1,343 @@
+/* index.css  (viene en el zip de assets)
+   Estilos de la Mesa de ayuda para todos los ejemplos y ejercicios.
+   No hace falta modificarlo: en clase solo se escribe JSX. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f6f8;
+  color: #1f2937;
+}
+
+.contenedor {
+  width: min(92%, 900px);
+  margin: 50px auto;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.encabezado { margin-bottom: 25px; }
+
+.etiqueta {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #4f46e5;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 8px; font-size: 2rem; }
+h2 { margin-bottom: 8px; font-size: 1.25rem; }
+.encabezado p { color: #6b7280; }
+
+.campo { margin-bottom: 20px; }
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+textarea { resize: vertical; }
+
+button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover { background-color: #252f3f; }
+
+.error {
+  display: block;
+  min-height: 18px;
+  margin-top: 6px;
+  color: #b91c1c;
+  font-size: 0.85rem;
+}
+
+.titulo-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+#contador {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background-color: #eef2ff;
+  color: #4338ca;
+  font-size: 0.85rem;
+}
+
+.solicitud {
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.solicitud:last-child { border-bottom: none; }
+.solicitud h3 { margin: 0 0 10px; }
+.solicitud p { margin: 6px 0; color: #4b5563; }
+.sin-datos { color: #6b7280; }
+
+pre {
+  padding: 20px;
+  overflow-x: auto;
+  border-radius: 10px;
+  background-color: #111827;
+  color: #e5e7eb;
+  line-height: 1.5;
+}
+
+/* NUEVO: menú compartido por las dos páginas */
+.menu {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.menu a {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #4338ca;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu a:hover { background-color: #eef2ff; }
+
+/* ===== Header, Footer, login y soporte (reto anterior) ===== */
+
+/* Header: logo a la izquierda, menú a la derecha */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 14px 20px;
+  border-radius: 16px;
+  background-color: #111827;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.cabecera .menu { margin-bottom: 0; flex-wrap: wrap; }
+
+/* Footer */
+.pie {
+  padding: 20px 0 0;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.pie p { margin: 4px 0; }
+.pie a { color: #4338ca; text-decoration: none; }
+
+/* Login: tarjeta más angosta y centrada */
+.login { max-width: 480px; margin-left: auto; margin-right: auto; }
+
+/* Casilla "Recordarme": casilla y texto en la misma línea */
+.recordar { display: flex; align-items: center; gap: 8px; }
+.recordar input { width: auto; }
+.recordar label { margin: 0; font-weight: normal; }
+
+/* Soporte: horario y tres tarjetas una al lado de la otra */
+.horario { color: #6b7280; }
+
+.soporte {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tarjeta-soporte {
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #f9fafb;
+}
+
+.tarjeta-soporte h3 { margin: 0 0 6px; }
+.tarjeta-soporte p { margin: 0 0 10px; color: #4b5563; font-size: 0.9rem; }
+
+.extension {
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: #eef2ff;
+  color: #4338ca;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ===== Ejemplos y ejercicios de los conceptos ===== */
+
+.seccion { margin-bottom: 56px; scroll-margin-top: 16px; }
+
+.titulo-seccion {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #4f46e5;
+  font-size: 1.6rem;
+}
+
+.subtitulo {
+  margin: 22px 0 10px;
+  color: #4f46e5;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.saludo {
+  padding: 12px 16px;
+  border-left: 4px solid #4f46e5;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.vacio { color: #b45309; font-style: italic; }
+
+.detalle {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f3f4f6;
+}
+
+.numero { font-size: 2rem; font-weight: bold; color: #4f46e5; }
+
+/* Botones pequeños (el estilo general de button ocupa todo el ancho) */
+.boton { width: auto; padding: 8px 14px; font-size: 0.9rem; }
+.boton.secundario { background-color: #eef2ff; color: #4338ca; }
+.boton.secundario:hover { background-color: #e0e7ff; }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.fila-botones { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+
+.fila-tarjetas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.fila-tarjetas .tarjeta { margin-bottom: 0; }
+.tarjeta h3 { margin-top: 0; }
+
+/* Listas */
+.lista { margin: 12px 0 0; padding: 0; list-style: none; }
+
+.lista li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lista li:last-child { border-bottom: none; }
+.lista li > span { color: #6b7280; }
+.lista li .boton { margin-left: auto; }
+.lista li .boton + .boton { margin-left: 0; }
+.lista li.hecha { color: #9ca3af; text-decoration: line-through; }
+
+/* Insignias y estados */
+.insignia, .estado {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: bold;
+}
+
+.lista li > .insignia.alta, .insignia.alta { background-color: #fee2e2; color: #b91c1c; }
+.lista li > .insignia.baja, .insignia.baja { background-color: #dcfce7; color: #166534; }
+.lista li > .estado.pendiente { background-color: #fef3c7; color: #92400e; }
+.lista li > .estado.atendida { background-color: #dcfce7; color: #166534; }
+
+/* Tabla */
+.tabla { width: 100%; border-collapse: collapse; background-color: #ffffff; }
+.tabla th, .tabla td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; text-align: left; }
+.tabla th { background-color: #eef2ff; color: #3730a3; }
+
+/* Avisos (children) */
+.aviso { margin-bottom: 14px; padding: 14px 18px; border-left: 5px solid; border-radius: 10px; }
+.aviso p { margin: 6px 0 0; }
+.aviso ul { margin: 6px 0 0; }
+.aviso.info { border-color: #2563eb; background-color: #eff6ff; }
+.aviso.alerta { border-color: #dc2626; background-color: #fef2f2; }
+
+/* Contador */
+.contador {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background-color: #ffffff;
+}
+
+/* Resumen y ficha */
+.resumen { display: flex; gap: 24px; margin-bottom: 12px; font-size: 1.05rem; }
+.ficha { padding: 14px; border-radius: 10px; background-color: #f9fafb; }
+.ficha h3 { margin: 0 0 6px; }
+.ficha p { margin: 4px 0; }
+
+select { margin-bottom: 4px; }
